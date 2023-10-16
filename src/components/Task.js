@@ -1,11 +1,12 @@
 import React from 'react';
-import Button from './Button';
 
-const Task = () => {
+const Task = ({ title, description, startTime, endTime }) => {
     return (
         <div className="task-container">
-            {}
-            <Button />
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <p>Start Time: {startTime}</p>
+            <p>End Time: {endTime}</p>
         </div>
     );
 };
