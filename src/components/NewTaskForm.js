@@ -7,19 +7,22 @@ const NewTaskForm = () => {
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
     const [taskText, setTaskText] = useState('');
-    const [taskTime, setTaskTime] = useState('');
+    const [startTime, setStartTime] = useState('');
+    const [endTime, setEndTime] = useState('');
     const [taskDay, setTaskDay] = useState(days[0]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const newTask = {
             text: taskText,
-            time: taskTime,
+            startTime: startTime,
+            endTime: endTime,
             day: taskDay,
         };
         setTasks(prevTasks => [...prevTasks, newTask]);
         setTaskText('');
-        setTaskTime('');
+        setStartTime('');
+        setEndTime('');
     };
 
     return (
@@ -29,8 +32,12 @@ const NewTaskForm = () => {
                 <input type="text" className="form-control" value={taskText} onChange={(e) => setTaskText(e.target.value)} />
             </div>
             <div className="mb-3">
-                <label className="form-label">Time</label>
-                <input type="time" className="form-control" value={taskTime} onChange={(e) => setTaskTime(e.target.value)} />
+                <label className="form-label">Start Time</label>
+                <input type="time" className="form-control" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
+            </div>
+            <div className="mb-3">
+                <label className="form-label">End Time</label>
+                <input type="time" className="form-control" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
             </div>
             <div className="mb-3">
                 <label className="form-label">Day</label>
