@@ -22,8 +22,6 @@ const Day = ({ day }) => {
         >
             <h2>{day}</h2>
             <p>Amount of tasks: {dayTasks.length}</p>
-            <p>Total tasks: {totalDuration}</p>
-            {/* Add your tasks here */}
             {dayTasks.map(task => <Task {...task} />)}
         </div>
     );
