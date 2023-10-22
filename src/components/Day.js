@@ -22,7 +22,6 @@ const Day = ({ day }) => {
         >
             <h2>{day}</h2>
             <p>Amount of tasks: {dayTasks.length}</p>
-            {dayTasks.map(task => <Task {...task} />)}
         </div>
     );
 };
