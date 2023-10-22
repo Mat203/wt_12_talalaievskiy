@@ -20,7 +20,7 @@ function App() {
             <div className="col-md-6">
               <div className="row">
                 <div className="col-md-12 border">
-                  <h2>Day in detailssdasdasd</h2>
+                  <h2>Day in details</h2>
                   {selectedDay && <DayExpanded />}
                 </div>
               </div>

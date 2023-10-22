@@ -1,12 +1,10 @@
 import React from 'react';
 
-const Task = ({ title, description, startTime, endTime }) => {
+const Task = ({ text, time }) => {
     return (
-        <div className="task-container">
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <p>Start Time: {startTime}</p>
-            <p>End Time: {endTime}</p>
+        <div className="task">
+            <h3>{text}</h3>
+            <p>{time}</p>
         </div>
     );
 };

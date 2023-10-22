@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { useContext } from 'react';
-import { SelectedDayContext } from './Week';
+// NewTaskForm.js
+import React, { useState, useContext } from 'react';
+import { SelectedDayContext, TasksContext } from './Week';
 
-const NewTaskForm = ({ setTasks }) => {
+const NewTaskForm = () => {
+    const { tasks, setTasks } = useContext(TasksContext);
     const { selectedDay } = useContext(SelectedDayContext);
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
