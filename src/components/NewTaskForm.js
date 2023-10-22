@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
-import { SelectedDayContext, TasksContext } from './Week';
+import { TasksContext } from './Week';
 
 const NewTaskForm = () => {
     const { tasks, setTasks } = useContext(TasksContext);
-    const { selectedDay } = useContext(SelectedDayContext);
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
     const [taskText, setTaskText] = useState('');
@@ -47,7 +46,7 @@ const NewTaskForm = () => {
                     ))}
                 </select>
             </div>
-            <button type="submit" className="btn btn-primary">Добавить задание</button>
+            <button type="submit" className="btn btn-primary">Add Task</button>
         </form>
     );
 };
